@@ -1,0 +1,126 @@
+﻿@page "/students"
+@inject StudentsProvider StudentsProvider
+<h3>Students</h3>
+
+@if (StudentsProvider.Students.Count > 0)
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Semester</th>
+                <th>Department</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in StudentsProvider.Students)
+            {
+                <tr>
+                    <td>@student.Name</td>
+                    <td>@student.Age</td>
+                    <td>@student.Semester</td>
+                    <td>@student.Department</td>
+                    <td>@student.Email</td>
+                    <td>@student.PhoneNumber</td>
+                    <td><button @onclick="() => DeleteStudent(student)">Delete</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No students found.</p>
+}
+
+<h4>Add Student</h4>
+<form @onsubmit="AddStudent">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" @bind="newStudent.Name" required />
+    </div>
+    <div>
+        <label for="age">Age:</label>
+        <input type="number" id="age" @bind="newStudent.Age" required />
+    </div>
+    <div>
+        <label for="semester">Semester:</label>
+        <input type="text" id="semester" @bind="newStudent.Semester" required />
+    </div>
+    <div>
+        <label for="department">Department:</label>
+        <input type="text" id="department" @bind="newStudent.Department" required />
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" @bind="newStudent.Email" required />
+    </div>
+    <div>
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" @bind="newStudent.PhoneNumber" required />
+    </div>
+    <button type="submit">Add</button>
+</form>
+
+<h4>Edit Student</h4>
+@if (selectedStudent != null)
+{
+    <form @onsubmit="UpdateStudent">
+        <div>
+            <label for="editName">Name:</label>
+            <input type="text" id="editName" @bind="selectedStudent.Name" required />
+        </div>
+        <div>
+            <label for="editAge">Age:</label>
+            <input type="number" id="editAge" @bind="selectedStudent.Age" required />
+        </div>
+        <div>
+            <label for="editSemester">Semester:</label>
+            <input type="text" id="editSemester" @bind="selectedStudent.Semester" required />
+        </div>
+        <div>
+            <label for="editDepartment">Department:</label>
+            <input type="text" id="editDepartment" @bind="selectedStudent.Department" required />
+        </div>
+        <div>
+            <label for="editEmail">Email:</label>
+            <input type="email" id="editEmail" @bind="selectedStudent.Email" required />
+        </div>
+        <div>
+            <label for="editPhoneNumber">Phone Number:</label>
+            <input type="tel" id="editPhoneNumber" @bind="selectedStudent.PhoneNumber" required />
+        </div>
+        <button type="submit">Update</button>
+    </form>
+}
+
+@code {
+    private Student newStudent { get; set; }
+    private Student selectedStudent { get; set; }
+
+    protected override void OnInitialized()
+    {
+        newStudent = new Student();
+    }
+
+    private void AddStudent()
+    {
+        StudentsProvider.AddStudent(newStudent);
+        newStudent = new Student();
+    }
+
+    private void DeleteStudent(Student student)
+    {
+        StudentsProvider.RemoveStudent(student);
+    }
+
+    private void UpdateStudent()
+    {
+        StudentsProvider.UpdateStudent(selectedStudent);
+        selectedStudent = null;
+    }
+}
