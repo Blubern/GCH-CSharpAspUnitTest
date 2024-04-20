@@ -10,7 +10,7 @@
 - [**Challenge 3 - Add some UnitTests / Refactoring**](#Challenge-3---Add-some-UnitTests-/-Refactoring)
 - [**Challenge 4 - Convert Phyton code into C# Code**](#Challenge-4---Convert-Phyton-code-into-C#-Code)
 - [**Finish**](#Finish)
-- [**Solutions / Insperation - Spoilerwarning**](#-Solutions-/-Insperation---Spoilerwarning)
+- [**Solutions / Inspiration - Spoiler-warning**](#-Solutions-/-Inspiration---Spoiler-warning)
 
 ### GCH-CSharpAspUnitTest introduction
 
@@ -38,8 +38,8 @@ GitHub Copilot is not just a tool! It's your coding companion throughout this ha
 
 ### More Information about Github Copilot, Github Copilot Chat and VS2022
 - Use GitHub Copilot Completions [Documentation](https://learn.microsoft.com/en-us/visualstudio/ide/visual-studio-github-copilot-extension?view=vs-2022)
-- Use GitHub Copilot Chat [Documenation](https://learn.microsoft.com/en-us/visualstudio/ide/visual-studio-github-copilot-chat?view=vs-2022)
-- Tips to improve Copilot Chat results [Documentation](https://learn.microsoft.com/en-us/visualstudio/ide/copilot-chat-context?view=vs-2022)
+- Use GitHub Copilot Chat [Documentation](https://learn.microsoft.com/en-us/visualstudio/ide/visual-studio-github-copilot-chat?view=vs-2022)
+- Tips to improve Copilot Chat Results [Documentation](https://learn.microsoft.com/en-us/visualstudio/ide/copilot-chat-context?view=vs-2022)
 - Debug with GitHub Copilot [Documentation](https://learn.microsoft.com/en-us/visualstudio/debugger/debug-with-copilot?view=vs-2022)
 - Intro to GitHub Copiulot in Visual Studio [Video](https://www.youtube.com/watch?v=z1ycDvspv8U)
 
@@ -71,8 +71,8 @@ Try out:
 - write prompts in code comments
 - open the inline chat (Alt+/)
 - try out the commands e.g. /help
-- open the github chat windows and have a conversation with Copilot
-- In case you don't know that much about Blazor try to find a way that Copilot will explain you code / files
+- open the github chat window and have a conversation with Copilot
+- In case you don't know that much about Blazor try to find a way that Copilot will explain your code / files
 
 ## Challenge 1 - Create a new Page with a Todo List
 
@@ -80,24 +80,24 @@ Here we want to create a new Blazor with a Todo list and the Page should be reac
 
 ### The requirements for the todo list are:
 - Users can add new Tasks to the Todo List
-- The List should be displaced on the page
+- The List should be displayed on the page
 - Users can mark tasks in the list as completed
 - Users can delete tasks from the list
 - Users can clear the complete list
 
 ### Actions
 
-* Find a way to create the todo list with copilot
+* Find a way to create a todo list with the copilot
 * Be precise in your prompts and creative
 * Improve your prompts iterative
 
 ### Success criteria
 
-* Yout Todo List is running and fulfill all requirements
+* Your Todo List is running and fulfills all requirements
 
 ## Challenge 2 - Add legacy code / fix it / add more data
 
-Here we want to add some legacy code into our project.
+Here we want to add some legacy code to our project.
 Add the files from the Folder Challenge2 from this Repo into your Project.
 ```
 Student.cs => Project root folder
@@ -107,35 +107,35 @@ Students.razor => Pages Folder in your Project
 
 ### Actions
 
-* Add the Students page into your navigation menu - in case you don't know how ask Copilot
-* Start your Project and open the Students Page - you show see an error ask copilot how you can fix it.
-* Fill out the Add Student Formular and press the add button. You will see that an Exception is thrown. Ask Copuilot in the Exception Thrown dialog for Help and fix with him the error.
+* Add the Students page to your navigation menu - in case you don't know how ask Copilot
+* Start your Project and open the Students Page - you will see an error ask copilot how you can fix it.
+* Fill out the Add Student Formula and press the add button. You will see that an Exception is thrown. Ask Copuilot in the Exception Thrown dialog for Help and fix with him the error.
 * The Edit Student function is not working correctly. Ask Copilot if he can help you to find the problem.
-* Try to generate more Students in the StudentsProvider with help of Copilot
+* Try to generate more Students in the StudentsProvider with the help of Copilot
 
 ### Success criteria
 
 * All errors are fixed
-* You have more sample stundets
-* The Edit Formular is working
+* You have more sample students
+* The Edit Formula is working
 
 ## Challenge 3 - Add some UnitTests / Refactoring
-Here we want to add UnitTests into our Project.
+Here we want to add UnitTests to our Project.
 To create a UnitTest Project follow the following Steps:
-1. Right-Click on the Solution and select the new Add => New project Menu Item
+1. Right-click on the Solution and select the new Add => New project Menu Item
 2. In the Create a new project window, type 'nunit c#' on the search box and hit Enter.
 3. Select the Nunit Test C# template and select Next.
 4. In the Configure your new project window, enter BlazorAppGithubCopilot.Tests as the project name and select Next.
 5. In the Additional information window, select the following Options
     - .NET 8
 6. After setting the options select create
-7. When the project is created start the Tests. Right Click on the Test Project and select Run Tests.
-8. You should see that two Tests was sucessfully running.
+7. When the project is created start the Tests. Right-click on the Test Project and select Run Tests.
+8. You should see that two Tests were successfully running.
 
 ### Actions
 - Add the PricingCalculator.cs File into your Project into the root folder of the Project.
 - Try to understand what the CalculateTotalPrice method does
-- Ask Copilot to help you to understand the CalculateTotalPrice method
+- Ask Copilot to help you understand the CalculateTotalPrice method
 - Ask Copilot to write you some unit tests for the CalculateTotalPrice method
 - Think about the quality of the Tests. Maybe extend the tests with Copilot. Make all Tests green.
 - Refactor the CalculateTotalPrice Method and keep the Tests green
@@ -143,23 +143,23 @@ To create a UnitTest Project follow the following Steps:
 
 ### Success criteria
 
-* Your Test are Green and the Code is much better readable and understandable
+* Your Tests are Green and the Code is much better readable and understandable
 
 ## Challenge 4 - Convert Phyton code into C# Code
-In this challange we want to convert phyton code into c# for our project.
+In this challenge, we want to convert phyton code into c# for our project.
 
 ### Actions
 - Open the FinancialCalculator.py file and ask copilot if he can help you to migrate it to c#
-- Take care that the user input and the console output is removed and converted into parameter and function results.
-- When you have your C# Class of the Phyton code create a Blazor Page that the user can execute the Financial Calcualtion
+- Take care that the user input and the console output are removed and converted into parameter and function results.
+- When you have your C# Class of the Phyton code create a Blazor Page that the user can execute the Financial Calculation
 
 ### Success criteria
 
 * The Phyton Code is converted to C# and the user can Navigate to a Blazor Page and execute the financial Calculation
 
-# Solutions / Insperation - Spoilerwarning
+# Solutions / Inspiration - Spoiler warning
 > [!WARNING]
-> Read thic chapter only when you are finished or you get stuck in a Challange
+> Read this chapter only when you are finished or you get stuck in a Challenge
 
 ## Challenge 0 - Tipps
 - Take a look in the: [More Information about Github Copilot, Github Copilot Chat and VS2022](#More-Information-about-Github-Copilot,-Github-Copilot-Chat-and-VS2022) section.
@@ -175,14 +175,14 @@ In this challange we want to convert phyton code into c# for our project.
 ## Challenge 1 - Tipps
 Try this prompt for Copilot chat:
 ```
-I want to create in my Blazor App a new Page. On this Page i want to create a Todo List. The Todo List has Tasks.
+I want to create in my Blazor App a new Page. On this Page, i want to create a Todo List. The Todo List has Tasks.
 - Users can add new Tasks to the Todo List - this should be possible via a text box and a button
-- The List should be displaced on the page
+- The List should be displayed on the page
 - Users can mark tasks in the list as completed - with a checkbox
-- Users can delete tasks from the list - this chould be possible with a button on the task
-- Users can clear the complete list - this should be possible a button
-Can you create me the todo list?
-Please also take about the code to make the Todo List avaliable in the Navigation Menu
+- Users can delete tasks from the list - this should be possible with a button on the task
+- Users can clear the complete list - this should be possible with a button
+Can you create the todo list?
+Please also take about the code to make the Todo List available in the Navigation Menu
 ```
 
 ## Challenge 2 - Tipps
@@ -194,11 +194,11 @@ Please also take about the code to make the Todo List avaliable in the Navigatio
 - Ask Copilot what the function is doing
 - Use the /test command
 - Make the Tests working - think about the test coverage
-- Ask Copilot to help you to refactor the Code
-- Ask Copilot if he can explain you the long regex
+- Ask Copilot to help you refactor the Code
+- Ask Copilot if he can explain to you the long regex
 
 ## Challenge 4 - Tipps
-- Paste the Phyton code into Github Copilot chat and ask for: "can you convert me the phyton code into a c# class. convert the user input into parameters. and the output into a result class"
+- Paste the Phyton code into Github Copilot chat and ask for: "Can you convert me the phyton code into a c# Class. convert the user input into parameters. and the output into a result class"
 - Ask Copilot to generate a Blazor Page for the Calculation. Don't forget the Navigation Menu
 
 # Finish
